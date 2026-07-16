@@ -1,13 +1,18 @@
+import Counter from "./Counter"
+import Price from "./Price"
+
+import { useState } from "react"
+
 export default function App() {
+
+ const [count, setCount] = useState(0);
+
   return <>
-  
-    <div style={{
-      border:"1px solid black",
-      height:"50px",
-      width:"50px"
-    }}>
-      0
-    </div>
+    <h1>How Many Tickes to Buy</h1>
+    <Counter count={count} setCount={setCount}/>
+
+    <Price count={count}/>
+
 
   </>
 }
